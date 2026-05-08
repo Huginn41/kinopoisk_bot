@@ -11,12 +11,15 @@ Telegram-бот для поиска фильмов через Kinopoisk API.
 ## Архитектура
 
 Модульная структура с чётким разделением слоёв:
-├── api/           # HTTP-клиент Kinopoisk API
-├── handlers/      # Обработчики команд и сообщений
-├── keyboards/     # Inline и Reply клавиатуры
-├── database/      # Peewee ORM: модели, CRUD, история
-├── states/        # FSM-состояния диалогов
-└── utils/         # Вспомогательные утилиты
+
+| Модуль | Описание |
+|---|---|
+| `api/` | HTTP-клиент Kinopoisk API |
+| `handlers/` | Обработчики команд и сообщений |
+| `keyboards/` | Inline и Reply клавиатуры |
+| `database/` | Peewee ORM: модели, CRUD, история |
+| `states/` | FSM-состояния диалогов |
+| `utils/` | Вспомогательные утилиты |
 
 **Ключевые решения:**
 - FSM (Finite State Machine) через pyTelegramBotAPI — 
